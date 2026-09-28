@@ -1,0 +1,210 @@
+/* Product Card Styles */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(168, 85, 247, 0.2);
+  border-color: var(--primary-500);
+}
+
+.product-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.product-category-chip {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.product-promo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--amber-400);
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+/* Product Icon Visual Stage (No human photos) */
+.product-visual-stage {
+  height: 180px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme='light'] .product-visual-stage {
+  background: linear-gradient(135deg, rgba(241, 245, 249, 0.8) 0%, rgba(226, 232, 240, 0.8) 100%);
+}
+
+.visual-icon-glow {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-400);
+  transition: transform var(--transition-normal);
+}
+
+.product-card:hover .visual-icon-glow {
+  transform: scale(1.15) rotate(-3deg);
+  color: #ffffff;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.45) 0%, transparent 70%);
+}
+
+.product-symbol-icon {
+  filter: drop-shadow(0 4px 10px rgba(168, 85, 247, 0.4));
+}
+
+.discount-tag-pill {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: var(--rose-500);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(244, 63, 94, 0.4);
+}
+
+.product-details-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+}
+
+.product-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.rating-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: var(--amber-400);
+  font-weight: 700;
+}
+
+.star-filled {
+  fill: currentColor;
+}
+
+.reviews-count {
+  color: var(--text-muted);
+}
+
+.stock-tag {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--emerald-400);
+  font-weight: 600;
+}
+
+.product-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.6rem;
+}
+
+.product-description {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.price-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-main-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.15rem;
+}
+
+.currency-symbol {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-400);
+}
+
+.price-number {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.price-original {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.add-cart-btn {
+  padding: 0.6rem 1.1rem;
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+.add-cart-btn.btn-added {
+  background: linear-gradient(135deg, var(--emerald-500) 0%, var(--teal-500) 100%);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+}

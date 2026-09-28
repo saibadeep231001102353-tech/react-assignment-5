@@ -1,0 +1,251 @@
+/* Product List Styles */
+.product-list-section {
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.catalog-toolbar-card {
+  padding: 1.15rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.search-filter-wrapper {
+  flex: 1;
+  min-width: 280px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-search-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.toolbar-search-input {
+  width: 100%;
+  padding: 0.8rem 2.5rem 0.8rem 2.85rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.toolbar-search-input:focus {
+  border-color: var(--primary-500);
+  background: var(--bg-surface);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.2);
+}
+
+.toolbar-clear-btn {
+  position: absolute;
+  right: 0.85rem;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.2rem;
+}
+
+.toolbar-clear-btn:hover {
+  color: var(--rose-400);
+}
+
+.sort-selector-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--bg-surface-elevated);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.sort-icon {
+  color: var(--primary-400);
+}
+
+.sort-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.sort-dropdown {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.sort-dropdown option {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+/* Category Filter Chips */
+.category-chips-scroll {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.category-pill {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.category-pill:hover {
+  background: var(--bg-surface);
+  color: var(--primary-400);
+  border-color: var(--primary-500);
+  transform: translateY(-1px);
+}
+
+.category-pill.active {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(139, 92, 246, 0.2) 100%);
+  border-color: var(--primary-500);
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(168, 85, 247, 0.25);
+}
+
+.cat-count-badge {
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius-full);
+}
+
+/* Catalog Meta Bar */
+.catalog-meta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.meta-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.catalog-heading {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.results-count-chip {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  background: var(--bg-surface-elevated);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.category-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--primary-400);
+  font-weight: 600;
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Empty Catalog State */
+.empty-catalog-card {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+.empty-icon-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(168, 85, 247, 0.15);
+  color: var(--primary-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.empty-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  max-width: 480px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-toolbar-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
